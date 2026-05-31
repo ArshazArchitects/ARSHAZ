@@ -25,28 +25,46 @@ body{
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  padding:40px 28px;
+  justify-content:flex-start;
+  padding:120px 28px 40px 28px;
   background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.9)),
+    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.78)),
     url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80');
   background-size:cover;
   background-position:center;
 }
 
 .brand{
-  letter-spacing:16px;
-  font-size:44px;
-  font-weight:700;
-  margin-bottom:18px;
+  letter-spacing:14px;
+  font-size:48px;
+  font-weight:900;
+  margin-bottom:36px;
 }
 
 .subtitle{
-  letter-spacing:4px;
-  font-size:13px;
-  color:#d0d0d0;
+  color:#f2f2f2;
   text-transform:uppercase;
-  line-height:2;
+}
+
+.line-one{
+  letter-spacing:5px;
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:30px;
+}
+
+.line-two{
+  letter-spacing:4px;
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:32px;
+}
+
+.line-three{
+  letter-spacing:2.2px;
+  font-size:11px;
+  font-weight:800;
+  white-space:nowrap;
 }
 
 .scroll{
@@ -112,6 +130,15 @@ body{
     font-size:72px;
   }
 
+  .line-two{
+    font-size:28px;
+  }
+
+  .line-three{
+    font-size:14px;
+    letter-spacing:4px;
+  }
+
   .grid{
     grid-template-columns:1fr 1fr;
   }
@@ -121,7 +148,7 @@ body{
   }
 
   .hero{
-    padding:60px;
+    padding:130px 60px 60px 60px;
   }
 }
 </style>
@@ -131,11 +158,13 @@ body{
 
 <section class="hero">
   <div class="brand">ARSHAZ</div>
+
   <div class="subtitle">
-  Architecture<br><br>
-  From Idea To Reality<br><br>
-  Concept • Visualize • Construct
-</div>
+    <div class="line-one">Architecture</div>
+    <div class="line-two">From Idea To Reality</div>
+    <div class="line-three">Concept • Visualize • Construct</div>
+  </div>
+
   <div class="scroll">SCROLL ↓</div>
 </section>
 
