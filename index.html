@@ -1,78 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ARSHAZ</title>
+<title>ARSHAZ Architects</title>
 
 <style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-margin:0;
-background:#111;
-color:white;
-font-family:Arial,sans-serif;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+  margin:0;
+  background:#080808;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-.card{
-text-align:center;
-max-width:400px;
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:40px 28px;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.9)),
+    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80');
+  background-size:cover;
+  background-position:center;
 }
 
-.logo{
-font-size:42px;
-font-weight:bold;
-letter-spacing:8px;
-margin-bottom:10px;
+.brand{
+  letter-spacing:16px;
+  font-size:44px;
+  font-weight:700;
+  margin-bottom:18px;
 }
 
 .subtitle{
-opacity:.7;
-margin-bottom:40px;
+  letter-spacing:4px;
+  font-size:13px;
+  color:#d0d0d0;
+  text-transform:uppercase;
+  line-height:2;
 }
 
-.btn{
-display:block;
-background:#222;
-color:white;
-text-decoration:none;
-padding:16px;
-margin:12px 0;
-border-radius:14px;
+.scroll{
+  position:absolute;
+  bottom:36px;
+  left:28px;
+  font-size:12px;
+  letter-spacing:4px;
+  color:#ccc;
 }
 
-.btn:hover{
-background:#333;
+.section{
+  padding:70px 28px;
 }
 
+.intro{
+  max-width:720px;
+  font-size:28px;
+  line-height:1.35;
+  letter-spacing:.5px;
+}
+
+.small{
+  color:#aaa;
+  font-size:14px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-top:30px;
+}
+
+.card{
+  border:1px solid rgba(255,255,255,.22);
+  padding:22px;
+  text-decoration:none;
+  color:white;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:13px;
+  transition:.25s;
+}
+
+.card:hover{
+  background:white;
+  color:black;
+}
+
+.footer{
+  padding:40px 28px;
+  color:#777;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+@media(min-width:700px){
+  .brand{
+    font-size:72px;
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section{
+    padding:90px 60px;
+  }
+
+  .hero{
+    padding:60px;
+  }
+}
 </style>
-
 </head>
 
 <body>
 
-<div class="card">
+<section class="hero">
+  <div class="brand">ARSHAZ</div>
+  <div class="subtitle">
+    Architecture<br>
+    Visualization<br>
+    Execution
+  </div>
+  <div class="scroll">SCROLL ↓</div>
+</section>
 
-<div class="logo">
-ARSHAZ
-</div>
+<section class="section">
+  <div class="small">About ARSHAZ</div>
+  <div class="intro">
+    Arshaz Architects is a design and build studio focused on modern villas,
+    architectural visualization, real materials, and project execution.
+  </div>
+</section>
 
-<div class="subtitle">
-Design • Visualization • Execution
-</div>
+<section class="section">
+  <div class="small">Explore</div>
 
-<a class="btn" href="#">Instagram</a>
+  <div class="grid">
+    <a class="card" href="#">ARSHAZ</a>
+    <a class="card" href="#">Projects</a>
+    <a class="card" href="#">Expertise</a>
+    <a class="card" href="#">Visualization</a>
+    <a class="card" href="#">Design & Build</a>
+    <a class="card" href="#">Materials</a>
+    <a class="card" href="#">Links</a>
+    <a class="card" href="#">Contact</a>
+  </div>
+</section>
 
-<a class="btn" href="#">WhatsApp</a>
-
-<a class="btn" href="#">Portfolio</a>
-
-<a class="btn" href="#">Contact</a>
-
+<div class="footer">
+  © ARSHAZ ARCHITECTS
 </div>
 
 </body>
