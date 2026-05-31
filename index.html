@@ -8,7 +8,13 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#080808;color:white;font-family:Arial,Helvetica,sans-serif}
+
+body{
+margin:0;
+background:#080808;
+color:white;
+font-family:Arial,Helvetica,sans-serif;
+}
 
 .hero{
 min-height:100vh;
@@ -17,21 +23,26 @@ flex-direction:column;
 justify-content:flex-start;
 padding:105px 28px 40px 28px;
 background:
-linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,.76)),
+linear-gradient(
+rgba(0,0,0,.08),
+rgba(0,0,0,.38)
+),
 url('Hero.PNG');
 background-size:cover;
-background-position:center;
+background-position:center center;
+background-repeat:no-repeat;
 }
 
 .brand{
 letter-spacing:8px;
-font-size:28px;
+font-size:30px;
 font-weight:900;
-margin-bottom:30px;
+margin-bottom:34px;
+text-shadow:0 2px 12px rgba(0,0,0,.35);
 }
 
 .subtitle{
-color:#f2f2f2;
+color:#fff;
 text-transform:uppercase;
 }
 
@@ -39,22 +50,25 @@ text-transform:uppercase;
 letter-spacing:8px;
 font-size:14px;
 font-weight:800;
-margin-bottom:24px;
+margin-bottom:22px;
+text-shadow:0 2px 12px rgba(0,0,0,.35);
 }
 
 .line-two{
 letter-spacing:2.4px;
-font-size:13px;
+font-size:14px;
 font-weight:800;
-margin-bottom:0;
+margin-bottom:2px;
+text-shadow:0 2px 12px rgba(0,0,0,.35);
 }
 
 .line-three{
 letter-spacing:1.4px;
-font-size:13px;
+font-size:14px;
 font-weight:800;
 white-space:nowrap;
-margin-top:2px;
+margin-top:0;
+text-shadow:0 2px 12px rgba(0,0,0,.35);
 }
 
 .scroll{
@@ -63,10 +77,13 @@ bottom:36px;
 left:28px;
 font-size:11px;
 letter-spacing:4px;
-color:#ccc;
+color:#fff;
+text-shadow:0 2px 12px rgba(0,0,0,.4);
 }
 
-.section{padding:70px 28px}
+.section{
+padding:70px 28px;
+}
 
 .intro{
 max-width:720px;
@@ -114,13 +131,38 @@ letter-spacing:2px;
 }
 
 @media(min-width:700px){
-.brand{font-size:58px;letter-spacing:12px}
-.line-one{font-size:18px;letter-spacing:12px}
-.line-two{font-size:22px}
-.line-three{font-size:22px;letter-spacing:3px}
-.grid{grid-template-columns:1fr 1fr}
-.section{padding:90px 60px}
-.hero{padding:130px 60px 60px 60px}
+
+.brand{
+font-size:58px;
+letter-spacing:12px;
+}
+
+.line-one{
+font-size:18px;
+letter-spacing:12px;
+}
+
+.line-two{
+font-size:22px;
+}
+
+.line-three{
+font-size:22px;
+letter-spacing:3px;
+}
+
+.grid{
+grid-template-columns:1fr 1fr;
+}
+
+.section{
+padding:90px 60px;
+}
+
+.hero{
+padding:130px 60px 60px 60px;
+}
+
 }
 </style>
 </head>
@@ -146,8 +188,7 @@ letter-spacing:2px;
 <div class="small">About ARSHAZ</div>
 
 <div class="intro">
-Arshaz Architects is a design and build studio focused on modern villas,
-architectural visualization, real materials, and project execution.
+Arshaz Architects is a design and build studio focused on modern villas, architectural visualization, real materials, and project execution.
 </div>
 
 </section>
