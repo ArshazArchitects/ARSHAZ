@@ -8,6 +8,10 @@
 <style>
 *{box-sizing:border-box}
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 background:#080808;
@@ -16,11 +20,12 @@ font-family:Arial,Helvetica,sans-serif;
 }
 
 .page{
+min-height:100vh;
 padding:42px 28px 70px 28px;
 }
 
 .topbar{
-margin-bottom:56px;
+margin-bottom:54px;
 }
 
 .back{
@@ -43,27 +48,54 @@ font-size:11px;
 letter-spacing:4px;
 text-transform:uppercase;
 color:#aaa;
-margin-bottom:70px;
+margin-bottom:64px;
 }
 
-.project{
-margin-bottom:90px;
+.project-card{
+display:block;
+text-decoration:none;
+color:white;
+margin-bottom:74px;
 }
 
-.project-head{
-margin-bottom:28px;
+.cover{
+width:100%;
+height:70vh;
+background:#111;
+border:1px solid rgba(255,255,255,.12);
+overflow:hidden;
+margin-bottom:18px;
+}
+
+.cover img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:.5s;
+}
+
+.project-card:hover img{
+transform:scale(1.03);
+}
+
+.project-info{
+display:grid;
+grid-template-columns:42px 1fr;
+gap:14px;
+align-items:start;
 }
 
 .number{
 font-size:11px;
 letter-spacing:4px;
 color:#777;
-margin-bottom:12px;
+padding-top:4px;
 }
 
 .name{
-font-size:24px;
-letter-spacing:6px;
+font-size:20px;
+letter-spacing:5px;
 font-weight:800;
 text-transform:uppercase;
 margin-bottom:10px;
@@ -72,35 +104,21 @@ margin-bottom:10px;
 .meta{
 font-size:11px;
 letter-spacing:3px;
+text-transform:uppercase;
 color:#aaa;
-text-transform:uppercase;
+line-height:1.8;
 }
 
-.image-block{
-width:100%;
-height:62vh;
-border:1px solid rgba(255,255,255,.16);
-margin-bottom:18px;
-background:#111;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#555;
-font-size:11px;
-letter-spacing:4px;
-text-transform:uppercase;
-overflow:hidden;
-}
-
-.image-block img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+.desc{
+font-size:13px;
+line-height:1.8;
+color:#ccc;
+margin-top:12px;
+max-width:620px;
 }
 
 .footer{
-padding-top:30px;
+padding-top:20px;
 color:#777;
 font-size:11px;
 letter-spacing:3px;
@@ -121,17 +139,21 @@ letter-spacing:14px;
 margin-bottom:90px;
 }
 
-.project{
-margin-bottom:120px;
+.project-card{
+margin-bottom:110px;
+}
+
+.cover{
+height:78vh;
 }
 
 .name{
-font-size:34px;
+font-size:32px;
 letter-spacing:8px;
 }
 
-.image-block{
-height:78vh;
+.project-info{
+grid-template-columns:70px 1fr;
 }
 
 }
@@ -147,103 +169,119 @@ height:78vh;
 </div>
 
 <div class="title">PROJECTS</div>
-<div class="subtitle">Selected Works · 08 Projects · 24 Images</div>
+<div class="subtitle">Selected Works · 08 Projects</div>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project01.html">
+<div class="cover">
+<img src="images/p01-cover.jpg" alt="Project 01 Cover">
+</div>
+<div class="project-info">
 <div class="number">01</div>
+<div>
 <div class="name">Project 01</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Tehran, Iran · 2025</div>
+<div class="desc">A selected architectural work exploring form, material, light, and built atmosphere.</div>
 </div>
-
-<div class="image-block"><img src="images/p01-01.jpg" alt="Project 01 Image 01"></div>
-<div class="image-block"><img src="images/p01-02.jpg" alt="Project 01 Image 02"></div>
-<div class="image-block"><img src="images/p01-03.jpg" alt="Project 01 Image 03"></div>
 </div>
+</a>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project02.html">
+<div class="cover">
+<img src="images/p02-cover.jpg" alt="Project 02 Cover">
+</div>
+<div class="project-info">
 <div class="number">02</div>
+<div>
 <div class="name">Project 02</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Iran · 2025</div>
+<div class="desc">A contemporary spatial study shaped through proportion, material clarity, and precise design intent.</div>
 </div>
-
-<div class="image-block"><img src="images/p02-01.jpg" alt="Project 02 Image 01"></div>
-<div class="image-block"><img src="images/p02-02.jpg" alt="Project 02 Image 02"></div>
-<div class="image-block"><img src="images/p02-03.jpg" alt="Project 02 Image 03"></div>
 </div>
+</a>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project03.html">
+<div class="cover">
+<img src="images/p03-cover.jpg" alt="Project 03 Cover">
+</div>
+<div class="project-info">
 <div class="number">03</div>
+<div>
 <div class="name">Project 03</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Iran · 2025</div>
+<div class="desc">A selected project focused on atmosphere, construction logic, and the experience of inhabiting space.</div>
 </div>
-
-<div class="image-block"><img src="images/p03-01.jpg" alt="Project 03 Image 01"></div>
-<div class="image-block"><img src="images/p03-02.jpg" alt="Project 03 Image 02"></div>
-<div class="image-block"><img src="images/p03-03.jpg" alt="Project 03 Image 03"></div>
 </div>
+</a>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project04.html">
+<div class="cover">
+<img src="images/p04-cover.jpg" alt="Project 04 Cover">
+</div>
+<div class="project-info">
 <div class="number">04</div>
+<div>
 <div class="name">Project 04</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Iran · 2025</div>
+<div class="desc">Architecture developed through a disciplined process of concept, visualization, and material resolution.</div>
 </div>
-
-<div class="image-block"><img src="images/p04-01.jpg" alt="Project 04 Image 01"></div>
-<div class="image-block"><img src="images/p04-02.jpg" alt="Project 04 Image 02"></div>
-<div class="image-block"><img src="images/p04-03.jpg" alt="Project 04 Image 03"></div>
 </div>
+</a>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project05.html">
+<div class="cover">
+<img src="images/p05-cover.jpg" alt="Project 05 Cover">
+</div>
+<div class="project-info">
 <div class="number">05</div>
+<div>
 <div class="name">Project 05</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Iran · 2025</div>
+<div class="desc">A design narrative moving from early vision toward a clear and buildable architectural form.</div>
 </div>
-
-<div class="image-block"><img src="images/p05-01.jpg" alt="Project 05 Image 01"></div>
-<div class="image-block"><img src="images/p05-02.jpg" alt="Project 05 Image 02"></div>
-<div class="image-block"><img src="images/p05-03.jpg" alt="Project 05 Image 03"></div>
 </div>
+</a>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project06.html">
+<div class="cover">
+<img src="images/p06-cover.jpg" alt="Project 06 Cover">
+</div>
+<div class="project-info">
 <div class="number">06</div>
+<div>
 <div class="name">Project 06</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Iran · 2025</div>
+<div class="desc">A spatial composition defined by mass, void, texture, and the relationship between interior and exterior life.</div>
 </div>
-
-<div class="image-block"><img src="images/p06-01.jpg" alt="Project 06 Image 01"></div>
-<div class="image-block"><img src="images/p06-02.jpg" alt="Project 06 Image 02"></div>
-<div class="image-block"><img src="images/p06-03.jpg" alt="Project 06 Image 03"></div>
 </div>
+</a>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project07.html">
+<div class="cover">
+<img src="images/p07-cover.jpg" alt="Project 07 Cover">
+</div>
+<div class="project-info">
 <div class="number">07</div>
+<div>
 <div class="name">Project 07</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Iran · 2025</div>
+<div class="desc">A selected work investigating architectural identity through clarity, restraint, and material presence.</div>
 </div>
-
-<div class="image-block"><img src="images/p07-01.jpg" alt="Project 07 Image 01"></div>
-<div class="image-block"><img src="images/p07-02.jpg" alt="Project 07 Image 02"></div>
-<div class="image-block"><img src="images/p07-03.jpg" alt="Project 07 Image 03"></div>
 </div>
+</a>
 
-<div class="project">
-<div class="project-head">
+<a class="project-card" href="project08.html">
+<div class="cover">
+<img src="images/p08-cover.jpg" alt="Project 08 Cover">
+</div>
+<div class="project-info">
 <div class="number">08</div>
+<div>
 <div class="name">Project 08</div>
-<div class="meta">Selected Work</div>
+<div class="meta">Iran · 2025</div>
+<div class="desc">A project shaped to create memorable spatial experience through design, detail, and execution.</div>
 </div>
-
-<div class="image-block"><img src="images/p08-01.jpg" alt="Project 08 Image 01"></div>
-<div class="image-block"><img src="images/p08-02.jpg" alt="Project 08 Image 02"></div>
-<div class="image-block"><img src="images/p08-03.jpg" alt="Project 08 Image 03"></div>
 </div>
+</a>
 
 <div class="footer">© ARSHAZ ARCHITECTS</div>
 
