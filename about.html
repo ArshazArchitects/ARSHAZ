@@ -20,9 +20,15 @@ min-height:100vh;
 padding:42px 28px 60px 28px;
 }
 
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:48px;
+}
+
 .back{
 display:inline-block;
-margin-bottom:48px;
 color:#aaa;
 text-decoration:none;
 font-size:11px;
@@ -30,11 +36,22 @@ letter-spacing:4px;
 text-transform:uppercase;
 }
 
+.lang-toggle{
+background:transparent;
+border:1px solid rgba(255,255,255,.28);
+color:#fff;
+padding:10px 14px;
+font-size:11px;
+letter-spacing:3px;
+text-transform:uppercase;
+font-family:Arial,Helvetica,sans-serif;
+}
+
 .title{
 font-size:28px;
 letter-spacing:8px;
 font-weight:900;
-margin-bottom:48px;
+margin-bottom:42px;
 }
 
 .lang-label{
@@ -45,29 +62,29 @@ color:#777;
 margin-bottom:14px;
 }
 
-.about-fa,
-.about-en{
+.about-text{
 font-family:"SF Mono","SFMono-Regular",ui-monospace,Menlo,Monaco,Consolas,monospace;
+font-size:15px;
+line-height:1.85;
+color:#f2f2f2;
 }
 
 .about-fa{
 direction:rtl;
 text-align:right;
-font-size:15px;
-line-height:1.9;
-color:#f2f2f2;
-margin-bottom:42px;
 }
 
 .about-en{
-font-size:14px;
-line-height:1.75;
-color:#dedede;
+direction:ltr;
+text-align:left;
 }
 
-.about-fa p,
-.about-en p{
+.about-text p{
 margin:0 0 14px 0;
+}
+
+.hidden{
+display:none;
 }
 
 .footer{
@@ -88,14 +105,9 @@ font-size:48px;
 letter-spacing:12px;
 }
 
-.about-fa{
+.about-text{
 font-size:17px;
-line-height:1.9;
-}
-
-.about-en{
-font-size:16px;
-line-height:1.75;
+line-height:1.85;
 }
 }
 </style>
@@ -105,13 +117,18 @@ line-height:1.75;
 
 <section class="page">
 
+<div class="topbar">
 <a class="back" href="index.html">← Back</a>
+<button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+</div>
 
 <div class="title">ABOUT US</div>
 
+<div id="fa-section">
+
 <div class="lang-label">فارسی</div>
 
-<div class="about-fa">
+<div class="about-text about-fa">
 
 <p>اَرشاز</p>
 
@@ -137,9 +154,13 @@ line-height:1.75;
 
 </div>
 
+</div>
+
+<div id="en-section" class="hidden">
+
 <div class="lang-label">English</div>
 
-<div class="about-en">
+<div class="about-text about-en">
 
 <p>ARSHAZ</p>
 
@@ -165,9 +186,29 @@ line-height:1.75;
 
 </div>
 
+</div>
+
 <div class="footer">© ARSHAZ ARCHITECTS</div>
 
 </section>
+
+<script>
+function toggleLanguage(){
+var fa=document.getElementById("fa-section");
+var en=document.getElementById("en-section");
+var button=document.querySelector(".lang-toggle");
+
+if(en.classList.contains("hidden")){
+fa.classList.add("hidden");
+en.classList.remove("hidden");
+button.textContent="FA";
+}else{
+en.classList.add("hidden");
+fa.classList.remove("hidden");
+button.textContent="EN";
+}
+}
+</script>
 
 </body>
 </html>
