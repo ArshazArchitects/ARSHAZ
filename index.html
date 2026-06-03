@@ -38,26 +38,18 @@ transition:opacity 1.6s ease;
 z-index:0;
 }
 
-.hero-bg{
-opacity:1;
-}
-
-.hero-bg-next{
-opacity:0;
-}
+.hero-bg{opacity:1}
+.hero-bg-next{opacity:0}
 
 .hero::after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(
-rgba(0,0,0,.08),
-rgba(0,0,0,.38)
-);
+background:linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.38));
 z-index:1;
 }
 
-.hero > *:not(.hero-bg):not(.hero-bg-next){
+.hero > *:not(.hero-bg):not(.hero-bg-next):not(.scroll){
 position:relative;
 z-index:2;
 }
@@ -71,15 +63,8 @@ text-shadow:0 2px 12px rgba(0,0,0,.35);
 white-space:nowrap;
 }
 
-.brand .wide{
-display:inline-block;
-width:16px;
-}
-
-.brand .tight{
-display:inline-block;
-width:8px;
-}
+.brand .wide{display:inline-block;width:16px}
+.brand .tight{display:inline-block;width:8px}
 
 .subtitle{
 color:#fff;
@@ -97,7 +82,7 @@ white-space:nowrap;
 }
 
 .line-two{
-letter-spacing:2.8px;
+letter-spacing:2.4px;
 font-size:14px;
 font-weight:800;
 margin-bottom:2px;
@@ -117,16 +102,14 @@ text-shadow:0 2px 12px rgba(0,0,0,.35);
 position:absolute;
 left:28px;
 bottom:28px;
+z-index:5;
 font-size:11px;
 letter-spacing:4px;
 color:#fff;
 text-shadow:0 2px 12px rgba(0,0,0,.4);
-z-index:20;
 }
 
-.section{
-padding:52px 28px;
-}
+.section{padding:52px 28px}
 
 .small{
 color:#aaa;
@@ -168,35 +151,23 @@ letter-spacing:2px;
 
 @media(min-width:700px){
 
-.brand{
-font-size:58px;
-}
-
-.brand .wide{
-width:28px;
-}
-
-.brand .tight{
-width:14px;
-}
+.brand{font-size:58px}
+.brand .wide{width:28px}
+.brand .tight{width:14px}
 
 .line-one{
 font-size:18px;
 letter-spacing:12px;
 }
 
-.line-two{
-font-size:22px;
-}
+.line-two{font-size:22px}
 
 .line-three{
 font-size:22px;
 letter-spacing:3px;
 }
 
-.section{
-padding:72px 60px;
-}
+.section{padding:72px 60px}
 
 .grid{
 grid-template-columns:1fr 1fr;
@@ -259,34 +230,13 @@ bottom:32px;
 const fallbackHero = "Hero.PNG";
 
 const heroImages = [
-"images/heroes/hero01.webp",
-"images/heroes/hero02.webp",
-"images/heroes/hero03.webp",
-"images/heroes/hero04.webp",
-"images/heroes/hero05.webp",
-"images/heroes/hero06.webp",
-"images/heroes/hero07.webp",
-"images/heroes/hero08.webp",
-"images/heroes/hero09.webp",
-"images/heroes/hero10.webp",
-"images/heroes/hero11.webp",
-"images/heroes/hero12.webp",
-"images/heroes/hero13.webp",
-"images/heroes/hero14.webp",
-"images/heroes/hero15.webp",
-"images/heroes/hero16.webp",
-"images/heroes/hero17.webp",
-"images/heroes/hero18.webp",
-"images/heroes/hero19.webp",
-"images/heroes/hero20.webp",
-"images/heroes/hero21.webp",
-"images/heroes/hero22.webp",
-"images/heroes/hero23.webp",
-"images/heroes/hero24.webp",
-"images/heroes/hero25.webp",
-"images/heroes/hero26.webp",
-"images/heroes/hero27.webp",
-"images/heroes/hero28.webp"
+"images/heroes/hero01.webp","images/heroes/hero02.webp","images/heroes/hero03.webp","images/heroes/hero04.webp",
+"images/heroes/hero05.webp","images/heroes/hero06.webp","images/heroes/hero07.webp","images/heroes/hero08.webp",
+"images/heroes/hero09.webp","images/heroes/hero10.webp","images/heroes/hero11.webp","images/heroes/hero12.webp",
+"images/heroes/hero13.webp","images/heroes/hero14.webp","images/heroes/hero15.webp","images/heroes/hero16.webp",
+"images/heroes/hero17.webp","images/heroes/hero18.webp","images/heroes/hero19.webp","images/heroes/hero20.webp",
+"images/heroes/hero21.webp","images/heroes/hero22.webp","images/heroes/hero23.webp","images/heroes/hero24.webp",
+"images/heroes/hero25.webp","images/heroes/hero26.webp","images/heroes/hero27.webp","images/heroes/hero28.webp"
 ];
 
 const bgA = document.querySelector(".hero-bg");
@@ -352,11 +302,8 @@ next = temp;
 
 async function initHero(){
 setBackground(bgA, fallbackHero);
-
 await findAvailableHeroes();
-
 setBackground(bgA, randomHero());
-
 setInterval(switchHero, 4000);
 }
 
