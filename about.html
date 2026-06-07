@@ -9,131 +9,99 @@
 html{scroll-behavior:smooth}
 body{
 margin:0;
-background:#080808;
-color:white;
+background:#070707;
+color:#fff;
 font-family:Arial,Helvetica,sans-serif;
 }
 .page{
 min-height:100vh;
-background:#080808;
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.9)),
+#070707;
 }
-.hero{
-padding:92px 28px 44px 28px;
-background:#080808;
+.wrap{
+width:100%;
+max-width:980px;
+margin:0 auto;
+padding:72px 26px 44px;
 }
-.brand{
-letter-spacing:0;
-font-size:30px;
-font-weight:900;
-margin-bottom:34px;
-white-space:nowrap;
-}
-.brand .wide{display:inline-block;width:16px}
-.brand .tight{display:inline-block;width:8px}
-.kicker{
-font-size:12px;
-letter-spacing:4px;
-text-transform:uppercase;
-color:#aaa;
-margin-bottom:20px;
-}
-.title{
+.logo{
 font-size:28px;
 font-weight:900;
+letter-spacing:8px;
+margin-bottom:54px;
+}
+.kicker{
+font-size:11px;
+letter-spacing:5px;
+text-transform:uppercase;
+color:#aaa;
+margin-bottom:18px;
+}
+h1{
+font-size:34px;
+line-height:1.08;
 letter-spacing:3px;
 text-transform:uppercase;
-line-height:1.18;
-margin:0 0 18px 0;
+margin:0 0 20px;
+font-weight:900;
 }
 .subtitle{
 font-size:13px;
+letter-spacing:3px;
+text-transform:uppercase;
+line-height:1.9;
+color:#ddd;
+margin-bottom:34px;
+}
+.lang-buttons{
+display:flex;
+gap:12px;
+margin:0 0 38px;
+}
+.lang-btn{
+appearance:none;
+border:1px solid rgba(255,255,255,.26);
+background:transparent;
+color:#fff;
+padding:13px 18px;
+font-size:11px;
 font-weight:800;
 letter-spacing:3px;
 text-transform:uppercase;
-color:#fff;
-line-height:1.8;
-max-width:760px;
+cursor:pointer;
+transition:.25s ease;
 }
-.section{
-padding:44px 28px;
-border-top:1px solid rgba(255,255,255,.12);
+.lang-btn.active,
+.lang-btn:hover{
+background:#fff;
+color:#000;
 }
-.section-label{
-font-size:12px;
-letter-spacing:4px;
-text-transform:uppercase;
-color:#aaa;
-margin-bottom:22px;
+.content{
+border-top:1px solid rgba(255,255,255,.16);
+border-bottom:1px solid rgba(255,255,255,.16);
+padding:34px 0 36px;
+min-height:420px;
 }
-.text-block{
-max-width:920px;
+.text{
+display:none;
 font-size:15px;
-line-height:1.95;
+line-height:2.05;
 color:#ddd;
 }
-.text-block p{
-margin:0 0 18px 0;
-}
-.text-block.fa{
+.text.active{display:block}
+.text.fa{
 direction:rtl;
 text-align:right;
-font-family:Arial,Helvetica,sans-serif;
+font-size:15.5px;
+line-height:2.2;
 }
-.divider{
-height:1px;
-background:rgba(255,255,255,.12);
-margin:34px 0;
-}
-.people-grid{
-display:grid;
-grid-template-columns:1fr;
-gap:28px;
-max-width:1100px;
-}
-.person-card{
-border:1px solid rgba(255,255,255,.18);
-background:rgba(255,255,255,.025);
-}
-.person-photo{
-width:100%;
-aspect-ratio:4/5;
-background:#161616;
-background-size:cover;
-background-position:center;
-border-bottom:1px solid rgba(255,255,255,.18);
-}
-.farzam-photo{background-image:url('images/team/farzam.webp')}
-.hossein-photo{background-image:url('images/team/hossein.webp')}
-.person-info{
-padding:22px;
-}
-.person-name{
-font-size:18px;
-font-weight:900;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:12px;
-}
-.person-role{
-font-size:12px;
-font-weight:800;
-letter-spacing:2.4px;
-text-transform:uppercase;
-color:#fff;
-line-height:1.8;
-margin-bottom:18px;
-}
-.person-meta{
-font-size:13px;
-line-height:1.9;
-color:#bbb;
-}
-.person-meta div{
-border-top:1px solid rgba(255,255,255,.1);
-padding:9px 0;
+.text p{
+margin:0 0 20px;
 }
 .statement{
-font-size:14px;
+margin-top:36px;
+font-size:13px;
 font-weight:900;
 letter-spacing:4px;
 text-transform:uppercase;
@@ -142,123 +110,97 @@ color:#fff;
 }
 .back{
 display:inline-block;
-margin-top:10px;
-font-size:12px;
+margin-top:38px;
+font-size:11px;
+font-weight:800;
 letter-spacing:3px;
 text-transform:uppercase;
 color:#fff;
 text-decoration:none;
-border:1px solid rgba(255,255,255,.22);
+border:1px solid rgba(255,255,255,.24);
 padding:14px 18px;
-transition:.25s;
+transition:.25s ease;
 }
 .back:hover{
-background:white;
-color:black;
+background:#fff;
+color:#000;
 }
 .footer{
-padding:40px 28px;
+margin-top:56px;
+font-size:10px;
+letter-spacing:3px;
+text-transform:uppercase;
 color:#777;
-font-size:12px;
-letter-spacing:2px;
 }
-@media(min-width:700px){
-.hero{
-padding:120px 60px 60px 60px;
+@media(min-width:760px){
+.wrap{
+padding:104px 60px 54px;
 }
-.brand{
-font-size:58px;
-margin-bottom:44px;
+.logo{
+font-size:42px;
+letter-spacing:13px;
+margin-bottom:70px;
 }
-.brand .wide{width:28px}
-.brand .tight{width:14px}
-.title{
-font-size:48px;
+h1{
+font-size:56px;
 letter-spacing:5px;
 }
 .subtitle{
-font-size:15px;
+font-size:14px;
 letter-spacing:4px;
 }
-.section{
-padding:64px 60px;
-}
-.text-block{
+.text{
 font-size:16px;
-line-height:2;
+line-height:2.05;
 }
-.people-grid{
-grid-template-columns:1fr 1fr;
-gap:34px;
+.text.fa{
+font-size:16px;
+line-height:2.25;
 }
-.person-name{
-font-size:22px;
-}
-.footer{
-padding:44px 60px;
+.content{
+padding:42px 0 46px;
 }
 }
 </style>
 </head>
 <body>
 <main class="page">
-<header class="hero">
-<div class="brand">A<span class="wide"></span>R<span class="tight"></span>S<span class="tight"></span>H<span class="tight"></span>A<span class="wide"></span>Z</div>
+<div class="wrap">
+<div class="logo">ARSHAZ</div>
 <div class="kicker">About</div>
-<h1 class="title">About ARSHAZ</h1>
-<div class="subtitle">Architecture From Vision To Built Form<br>Design • Visualization • Build • Management</div>
-</header>
-<section class="section">
-<div class="section-label">Studio</div>
-<div class="text-block fa">
-<p>ارشاز یک استودیوی معماری، طراحی و ساخت است که بر خلق فضاهای معاصر، دقیق و قابل اجرا تمرکز دارد.</p>
-<p>ما معماری را فقط به عنوان تصویر یا ایده نمی‌بینیم؛ معماری برای ما مسیری است از فکر، طراحی، تصویرسازی، جزئیات، متریال، مدیریت و اجرا.</p>
-<p>تمرکز ما بر پروژه‌هایی است که هویت، سادگی، کیفیت فضایی و قابلیت ساخت واقعی داشته باشند؛ از ویلا و فضاهای مسکونی تا پروژه‌های خاص، بازسازی، طراحی داخلی و اجرای معماری.</p>
+<h1>About ARSHAZ</h1>
+<div class="subtitle">Architecture From Vision To Built Form<br>Concept • Visualize • Realize</div>
+<div class="lang-buttons">
+<button class="lang-btn active" onclick="showLang('fa', this)">فارسی</button>
+<button class="lang-btn" onclick="showLang('en', this)">English</button>
 </div>
-<div class="divider"></div>
-<div class="text-block">
-<p>ARSHAZ is an architecture, design and build studio focused on creating contemporary spaces with clarity, precision and real-world execution.</p>
-<p>We see architecture not only as an image or an idea, but as a complete process — from concept and visualization to material, detail, management and construction.</p>
-<p>Our work is shaped around spatial quality, refined simplicity, material honesty and buildable design; from villas and residential projects to interiors, renovations and special architectural works.</p>
-</div>
-</section>
-<section class="section">
-<div class="section-label">Founders & Directors</div>
-<div class="people-grid">
-<article class="person-card">
-<div class="person-photo farzam-photo"></div>
-<div class="person-info">
-<div class="person-name">Farzam Darabi</div>
-<div class="person-role">Founder & Director<br>Architect / Spatial Thinker</div>
-<div class="person-meta">
-<div>Education: PhD in Architecture</div>
-<div>Age: 48</div>
-<div>Focus: Concept Design / Architecture / Visualization</div>
-<div>Role: Design Direction & Design-Build Strategy</div>
-</div>
-</div>
-</article>
-<article class="person-card">
-<div class="person-photo hossein-photo"></div>
-<div class="person-info">
-<div class="person-name">Hossein</div>
-<div class="person-role">Co-Founder / Project Partner</div>
-<div class="person-meta">
-<div>Education: —</div>
-<div>Age: —</div>
-<div>Focus: Execution / Site / Management</div>
-<div>Role: Project Coordination & Realization</div>
-</div>
-</div>
-</article>
-</div>
-</section>
-<section class="section">
-<div class="section-label">Process</div>
+<section class="content">
+<div id="fa" class="text fa active">
+<p>ارشاز یک استودیوی معماری، طراحی و ساخت است که با نگاه معاصر، دقیق و اجرایی به فضا شکل می‌دهد. ما معماری را فقط به‌عنوان تصویر، فرم یا ایده نمی‌بینیم؛ برای ما معماری یک مسیر کامل است، از شکل‌گیری کانسپت و طراحی اولیه تا تصویرسازی، انتخاب متریال، جزئیات اجرایی، مدیریت پروژه و تحقق نهایی در دنیای واقعی.</p>
+<p>در ارشاز، هدف ما خلق فضاهایی است که هم هویت داشته باشند و هم قابلیت اجرا. فضاهایی که ساده، شفاف، ماندگار و دقیق باشند؛ نه صرفاً زیبا در تصویر، بلکه قابل لمس، قابل ساخت و قابل زندگی. ما به کیفیت فضایی، تناسبات، نور، متریال، سکوت بصری، عملکرد و ارتباط میان انسان و فضا اهمیت می‌دهیم.</p>
+<p>حوزه فعالیت ما شامل طراحی ویلا، فضاهای مسکونی، بازسازی، طراحی داخلی، پروژه‌های خاص، تصویرسازی معماری، مدیریت اجرا و طراحی تا ساخت است. هر پروژه برای ما یک مسئله مستقل است؛ با زمینه، محدودیت، شخصیت و امکان‌های خودش. به همین دلیل تلاش می‌کنیم برای هر کار، پاسخی دقیق، منظم و متناسب با روح پروژه پیدا کنیم.</p>
+<p>ارشاز جایی میان ایده و واقعیت حرکت می‌کند؛ جایی که تصویر به تصمیم تبدیل می‌شود، تصمیم به جزئیات، و جزئیات به ساخت. ما به معماری به‌عنوان یک فرآیند زنده نگاه می‌کنیم؛ فرآیندی که باید هم زیبا باشد، هم منطقی، هم قابل اجرا و هم ماندگار.</p>
 <div class="statement">Concept • Visualize • Realize</div>
-<a class="back" href="index.html">← Back To Home</a>
+</div>
+<div id="en" class="text">
+<p>ARSHAZ is an architecture, design and build studio focused on creating contemporary spaces with clarity, precision and real-world execution. We do not see architecture only as an image, a form or an isolated idea. For us, architecture is a complete process — from concept development and design thinking to visualization, material selection, technical detailing, project management and final realization.</p>
+<p>Our aim is to create spaces with identity, discipline and buildable quality. Spaces that are refined, clear, lasting and precise; not only visually strong, but also tangible, functional and capable of becoming part of real life. We care about spatial quality, proportions, light, material honesty, visual silence, performance and the relationship between people and the environments they inhabit.</p>
+<p>Our work includes villas, residential projects, renovations, interiors, special architectural commissions, architectural visualization, construction management and design-build strategies. Every project is treated as a specific architectural problem, shaped by its context, constraints, character and possibilities. We look for responses that are thoughtful, structured and aligned with the spirit of each project.</p>
+<p>ARSHAZ moves between vision and built form; between the first architectural thought and the moment it becomes real. It is where an image becomes a decision, a decision becomes detail, and detail becomes construction. We see architecture as a living process — one that must be beautiful, logical, executable and enduring.</p>
+<div class="statement">Concept • Visualize • Realize</div>
+</div>
 </section>
+<a class="back" href="index.html">← Back To Home</a>
 <div class="footer">© ARSHAZ ARCHITECTS</div>
+</div>
 </main>
+<script>
+function showLang(lang, btn){
+document.querySelectorAll('.text').forEach(el=>el.classList.remove('active'));
+document.getElementById(lang).classList.add('active');
+document.querySelectorAll('.lang-btn').forEach(el=>el.classList.remove('active'));
+btn.classList.add('active');
+}
+</script>
 </body>
 </html>
